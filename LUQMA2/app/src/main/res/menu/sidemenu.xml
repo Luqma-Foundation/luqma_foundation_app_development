@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/About_Us"
+             android:title="About Us"
+            android:icon="@drawable/baseline_people_24"/>
+
+
+        <item android:id="@+id/Volunteer"
+            android:title="Volunteer"
+            android:icon="@drawable/baseline_pan_tool_24"/>
+
+
+        <item android:id="@+id/donate"
+            android:title="DONATE"
+            android:icon="@drawable/baseline_add_circle_24"/>
+
+        <item android:id="@+id/Survey"
+            android:title="Survey"
+            android:icon="@drawable/baseline_edit_note_24" />
+
+        <item android:id="@+id/Sign_up"
+            android:title="Sign Up"
+            android:icon="@drawable/baseline_person_add_alt_1_24"/>
+
+        <item android:id="@+id/login"
+            android:title="Login"
+            android:icon="@drawable/baseline_login_24"/>
+
+        <item android:id="@+id/logout"
+            android:title="Logout"
+            android:icon="@drawable/baseline_logout_24"/>
+
+
+
+
+
+
+
+    </group>
+</menu>
