@@ -1,5 +1,6 @@
 package com.luqmafoudation.luqma_foundation;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,15 +31,13 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout = findViewById(R.id.layout);
         navigationView = findViewById(R.id.navigation_view);
         toolbar = findViewById(R.id.toolbar);
-
-
         setSupportActionBar(toolbar);
 
+        navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.navigation_open,R.string.navigation_close);
-
-
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+        navigationView.setNavigationItemSelectedListener(this::onNavigationItemSelected);
 
     }
 
@@ -53,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        int id = menuItem.getItemId();
+        if (id == R.id.login){
+            Intent intent = new Intent(MainActivity.this, login.class);
+            startActivity(intent);
+        }
+        drawerLayout.closeDrawer(GravityCompat.START); return true;
+    }
     public void logout(View view) {
         logoutMenu(MainActivity.this);
     }
